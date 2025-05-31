@@ -25,3 +25,46 @@
   --third-family: 'Inter', sans-serif;
   --font3: 'Roboto', sans-serif;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+
+  font-family: var(--font-family);
+font-weight: 400;
+font-size: 18px;
+line-height: 150%;
+color: var(--white);
+background-color:#262453;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  flex-grow: 1;
+}
+
+
+@media screen and (min-width: 1200px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}

@@ -1,0 +1,202 @@
+
+.faq-section {
+  padding-bottom: 80px;
+ 
+}
+
+.ac li {
+  color: var(--white);
+  background-color: transparent;
+}
+.ac .ac-panel .ac-text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--white);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+.faq-section .headline {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.accordion-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  margin: 40px auto 0 auto;
+  font-family: var(--font-family);
+  gap: 0;
+}
+
+.ac {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  padding: 24px 20px;
+  width: 100%;
+  margin: 0;
+
+}
+
+.accordion-container .ac + .ac {
+    border-top: 1px solid var(--gray);
+}
+
+
+.ac {
+  color: var(--white);
+  font-weight: 300;
+}
+
+
+.ac .ac-trigger {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white);
+  font-family: var(--font-family);
+  padding-right: 24px;
+  transition: background-color 0.3s ease;
+}
+
+
+.ac-trigger::after {
+  content: none;
+}
+
+
+.ac.is-active,
+.ac:not(.is-active) {
+  background: transparent;
+  border-radius: 16px;
+  color: var(--white);
+  border-color: (--light-blue);
+}
+.ac.is-active .ac-trigger,
+.ac:not(.is-active) .ac-trigger {
+  color: white;
+}
+
+.ac-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 16px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.accordion-toggle-svg {
+  width: 32px;
+  height: 32px;
+  stroke-width: 2px;
+  stroke: var(--gray);
+  fill: var(--yellow-main);
+  border-radius: 16px;
+  transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+
+.arrow {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid var(--white);
+  border-bottom: 2px solid var(--white);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+
+.ac.is-active .arrow {
+  transform: translateY(-50%) rotate(-135deg);
+}
+
+
+.img-faq {
+  display: none;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .faq-section .headline {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .ac {
+    padding: 16px;
+  }
+
+  .ac .ac-trigger {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .ac-header {
+      width: 100%;
+      padding-right: 10px;
+  }
+
+  .faq-section {
+    padding-bottom: 40px;
+  }
+}
+
+
+@media only screen and (min-width: 1200px) {
+  .faq-section {
+   
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    position: relative;
+  }
+
+  .accordion-container {
+    margin: 0;
+  }
+
+  .ac {
+    padding: 24px 20px;
+    width: 774px;
+  }
+
+  .ac .ac-header {
+    min-width: 592px;
+    gap: 24px;
+  }
+
+
+  .img-faq {
+    display: inline-block;
+    max-width: 526px;
+    max-height: 408px;
+    margin-top: 180px;
+  }
+}
+.accordion-container .ac + .ac {
+    border-top: 1px solid var(--gray); 
+}

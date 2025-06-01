@@ -1,54 +1,52 @@
+
 .footer {
-  background: var(--yellow-main);
+  background-color: var(--yellow-main);
+  color: var(--black);
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 12px;
   line-height: 150%;
-  color: var(--black);
-  text-align: center;
-  padding: 0;
-  height: 69px;
+  padding: 20px 0;
 }
 
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%; 
-}
+  padding: 0 16px;
 
-@media (min-width: 1200px) {
-  .footer-container {
-    padding-left: 80px;
-    padding-right: 80px;
-  }
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 16px;
 }
 
 .footer-copyright p {
   margin: 0;
-  text-align: start;
+  text-align: center;
 }
 
 .footer-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  gap: 30px;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
 }
 
 .footer-item-link {
   text-decoration: none;
   color: var(--black);
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 150%;
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 .footer-item-link:hover {
   text-decoration: underline;
+}
+
+.mobile-break {
+  display: none;
 }
 
 .footer-item-link:focus {
@@ -62,22 +60,31 @@
     text-decoration: underline; 
 }
 
-/* Мобільна версія */
-@media (max-width: 767px) {
+/* Десктопна версія */
+@media (min-width: 768px) {
   .footer-container {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    gap: 32px;
-  }
-
-  .footer-list ul {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    align-items: center;
+    padding: 0 80px;
+    height: 69px;
   }
 
   .footer-copyright p {
-    text-align: center;
+    text-align: start;
+  }
+
+  .footer-list ul {
+    flex-direction: row;
+    gap: 30px;
+  }
+  .mobile-break {
+    display: none;
+  }
+
+}
+@media (max-width: 767px) {
+  .mobile-break {
+    display: inline;
   }
 }

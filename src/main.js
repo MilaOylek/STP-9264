@@ -10,3 +10,4 @@
 // import './js/mobile-menu.js';
 import './js/gallery.js';
 // import './js/review.js';
+import './js/header.js'

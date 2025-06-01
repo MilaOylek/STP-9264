@@ -1,0 +1,103 @@
+.about .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 48px;
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.about-header {
+    padding-bottom: 32px;
+    text-align: center;
+}
+
+.about-header h2 {
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.5;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+}
+
+.about-info {
+    width: 100%;
+    width: 288px;
+    font-size: 16px;
+    line-height: 1.5;
+
+    color: #fff;
+}
+
+.about-text-bold {
+    font-weight: 600;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 288px;
+    height: 251px;
+}
+
+.base-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 288px;
+    height: 251px;
+    fill: #FFD039;
+    stroke: #FFD039;
+    pointer-events: none;
+}
+
+/* Desktop styles (from 1200px) */
+@media screen and (min-width: 1200px) {
+    .about .container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        width: 1040px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 100px;
+    }
+
+    .about-header {
+        padding-bottom: 60px;
+        text-align: left;
+    }
+
+    .about-header h2 {
+        font-size: 32px;
+        text-align: left;
+    }
+
+    .about-info {
+        width: 508px;
+        height: auto;
+        font-size: 18px;
+    }
+
+    .image-wrapper {
+        width: 508px;
+        height: 438px;
+    }
+
+    .image-overlay {
+        top: 20px;
+        left: 20px;
+        width: 508px;
+        height: 438px;
+    }
+}

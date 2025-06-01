@@ -1,0 +1,181 @@
+
+.key-header {
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.5;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 32px;
+}
+
+.key-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+}
+
+/* Card */
+.key-item {
+    border-radius: 8px;
+    width: 249px;
+    height: 234px;
+    background-color: #051603;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.key-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Text styles */
+.key-item-header {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    color: #fff;
+}
+
+.key-item-text {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: #fff;
+}
+
+/* Desktop layout (≥1200px) */
+@media screen and (min-width: 1200px) {
+    .section-key .container {   
+        width: 1040px;
+    }
+    .key-header {
+        font-size: 36px;
+        padding-bottom: 60px;
+    }
+
+    .key-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto;
+        gap: 24px;
+        justify-content: center;
+    }
+
+    .key-item {
+        width: 283px;
+        height: 277px;
+        padding: 27px 24px;
+        gap: 42px;
+    }
+
+    .key-item-header {
+        font-size: 22px;
+    }
+
+    .key-item-text {
+        font-size: 18px;
+    }
+}
+.key-icon {
+    fill: transparent;
+    transition: stroke 0.3s ease;
+}
+/* Default background colors */
+#puzzle {
+    background-color: #051b2b;
+}
+
+#adventure {
+    background-color: #19052b;
+}
+
+#challenge {
+    background-color: #05252b;
+}
+
+#strategic {
+    background-color: #151512;
+}
+
+#powerup {
+    background-color: #051603;
+}
+
+#visual {
+    background-color: #2b0506;
+}
+
+/* Hover & focus effects */
+#puzzle:hover,
+#puzzle:focus {
+    background-color: #196fad;
+}
+
+#adventure:hover,
+#adventure:focus {
+    background-color: #8119ad;
+}
+
+#challenge:hover,
+#challenge:focus {
+    background-color: #19a8ad;
+}
+
+#strategic:hover,
+#strategic:focus {
+    background-color: #ad8f19;
+}
+
+#powerup:hover,
+#powerup:focus {
+    background-color: #0a8b2b;
+}
+
+#visual:hover,
+#visual:focus {
+    background-color: #8b0a0c;
+}
+
+#icon-puzzle {
+    stroke: #196fad;
+}
+
+#icon-adventure {
+    stroke: #8119ad;
+}
+
+#icon-challenge {
+    stroke: #19a8ad;
+}
+
+#icon-strategic {
+    stroke: #ad8f19;
+}
+
+#icon-powerup {
+    stroke: #0a8b2b;
+}
+
+#icon-visual {
+    stroke: #8b0a0c;
+}
+
+
+.key-item:hover .key-icon,
+.key-item:focus .key-icon {
+    stroke: #19052b;
+}

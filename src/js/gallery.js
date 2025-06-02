@@ -6,7 +6,6 @@ const dotsContainer = document.querySelector('.gallery-dots');
 
 let activeIndex = 0;
 
-
 cards.forEach((_, i) => {
   const dot = document.createElement('div');
   dot.classList.add('dot');

@@ -1,4 +1,3 @@
-
 .footer {
   background-color: var(--yellow-main);
   color: var(--black);
@@ -50,17 +49,16 @@
 }
 
 .footer-item-link:focus {
-    outline: none;
-    color: #fff; 
-    text-decoration: underline;
+  outline: none;
+  color: #fff;
+  text-decoration: underline;
 }
 
 .footer-item-link:active {
-    color: #fff; 
-    text-decoration: underline; 
+  color: #fff;
+  text-decoration: underline;
 }
 
-/* Десктопна версія */
 @media (min-width: 768px) {
   .footer-container {
     flex-direction: row;
@@ -81,7 +79,6 @@
   .mobile-break {
     display: none;
   }
-
 }
 @media (max-width: 767px) {
   .mobile-break {

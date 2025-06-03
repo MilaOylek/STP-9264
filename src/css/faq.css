@@ -1,23 +1,14 @@
-
-.faq-section {
-  padding-bottom: 80px;
- 
+ .faq-section {
+  /* padding-bottom: 80px; */
 }
-
-.ac li {
-  color: var(--white);
-  background-color: transparent;
-}
-.ac .ac-panel .ac-text {
+.accordion-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  margin: 40px auto 0 auto;
   font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 150%;
-  color: var(--white);
-  padding-top: 10px;
-  padding-bottom: 10px;
+  gap: 0;
 }
-
 
 .faq-section .headline {
   font-family: var(--second-family);
@@ -32,33 +23,26 @@
   margin-bottom: 60px;
 }
 
-.accordion-container {
-  display: flex;
-  flex-direction: column;
-  max-width: 100%;
-  margin: 40px auto 0 auto;
+.accordion-container li{
+    margin-bottom:36px;
+}
+
+.ac.is-active .ac-header {
+    border-bottom: 2px solid var(--yellow-main);
+}
+
+.ac,
+.ac-panel,
+.ac-text {
   font-family: var(--font-family);
-  gap: 0;
-}
-
-.ac {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #fff !important;
   display: flex;
   flex-direction: column;
-  border-radius: 8px;
-  padding: 24px 20px;
-  width: 100%;
-  margin: 0;
-
-}
-
-.accordion-container .ac + .ac {
-    border-top: 1px solid var(--gray);
-}
-
-
-.ac {
-  color: var(--white);
-  font-weight: 300;
+  background: none;
+    transition: all 0.3s ease;
 }
 
 
@@ -74,22 +58,27 @@
   transition: background-color 0.3s ease;
 }
 
-
 .ac-trigger::after {
-  content: none;
+  content: none !important;
 }
-
-
 .ac.is-active,
 .ac:not(.is-active) {
-  background: transparent;
-  border-radius: 16px;
-  color: var(--white);
-  border-color: (--light-blue);
+  border-radius: 8px;
+  color: #fff !important;
+  border: 1px solid rgba(202, 124, 200, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(
+    to right,
+    rgba(202, 124, 200, 0.5),
+    rgba(202, 124, 200, 0) 30%,
+    rgba(202, 124, 200, 0) 70%,
+    rgba(202, 124, 200, 0.3)
+  );
 }
+
 .ac.is-active .ac-trigger,
 .ac:not(.is-active) .ac-trigger {
-  color: white;
+  color: white !important;
 }
 
 .ac-header {
@@ -98,19 +87,20 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  gap: 16px;
+  /* gap: 16px; */
   text-transform: uppercase;
   position: relative;
+   transition: border-bottom 0.3s ease, padding-bottom 0.3s ease, margin-bottom 0.3s ease;
 }
 
-.accordion-toggle-svg {
-  width: 32px;
-  height: 32px;
-  stroke-width: 2px;
-  stroke: var(--gray);
-  fill: var(--yellow-main);
-  border-radius: 16px;
-  transition: transform 0.3s ease, fill 0.3s ease;
+.accordion-container .ac + .ac {
+    border-top: 1px solid var(--yellow-main); 
+}
+
+.ac.is-active .ac-header {
+    border-bottom: 2px solid var(--yellow-main);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 
@@ -127,16 +117,17 @@
   transition: transform 0.3s ease;
 }
 
-
 .ac.is-active .arrow {
   transform: translateY(-50%) rotate(-135deg);
 }
 
-
-.img-faq {
-  display: none;
+.ac {
+    background-color: transparent; 
+    padding-left: 20px; 
+    padding-right: 20px;
+    padding-top: 18px;
+    padding-bottom: 18px;
 }
-
 
 @media only screen and (max-width: 767px) {
   .faq-section .headline {
@@ -146,7 +137,7 @@
   }
 
   .ac {
-    padding: 16px;
+    /* padding: 16px; */
   }
 
   .ac .ac-trigger {
@@ -155,48 +146,41 @@
   }
 
   .ac-header {
-      width: 100%;
-      padding-right: 10px;
+    width: 100%;
+    padding-right: 10px;
   }
 
   .faq-section {
-    padding-bottom: 40px;
+    /* padding-bottom: 40px; */
   }
 }
 
-
 @media only screen and (min-width: 1200px) {
   .faq-section {
-   
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 60px;
+    /* gap: 60px; */
     position: relative;
+    color:#fff;
   }
 
   .accordion-container {
-    margin: 0;
+    /* margin: 0; */
+  }
+  .ac-text {
+    color:#fff;
   }
 
   .ac {
-    padding: 24px 20px;
+    /* padding: 10px 10px; */
     width: 774px;
+    color: #fff;
   }
 
   .ac .ac-header {
     min-width: 592px;
-    gap: 24px;
+    /* gap: 24px; */
   }
-
-
-  .img-faq {
-    display: inline-block;
-    max-width: 526px;
-    max-height: 408px;
-    margin-top: 180px;
-  }
-}
-.accordion-container .ac + .ac {
-    border-top: 1px solid var(--gray); 
-}
+  
+} 

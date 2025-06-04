@@ -27,7 +27,7 @@
     <script type="module" crossorigin src="/STP-9264/index.js"></script>
     <link rel="modulepreload" crossorigin href="/STP-9264/assets/vendor-Cb7VvBBu.js">
     <link rel="stylesheet" crossorigin href="/STP-9264/assets/vendor-BfPs2Zf6.css">
-    <link rel="stylesheet" crossorigin href="/STP-9264/assets/styles-jtKpSSAs.css">
+    <link rel="stylesheet" crossorigin href="/STP-9264/assets/styles-ARXE9fnM.css">
   </head>
   <body>
     <header class="header">
@@ -36,7 +36,8 @@
       <img src="/STP-9264/assets/img-header-B95Q_Tc1.png" alt="logo img">
     </a>
     
-    <nav class="nav-title">
+    <nav class="nav-title" id="navMenu">
+      <button class="close-btn" id="closeBtn">✕</button>
       <ul class="nav-list">
        
         <li class="nav-item">
@@ -57,7 +58,7 @@
       </ul>
     </nav>
   </div>
-  <button class="burger">
+  <button class="burger" id="burgerBtn">
     <svg>
       <use href="../img/sprite.svg#icon-burger"></use>
     </svg>
@@ -75,11 +76,12 @@
         <div class="hero-info">
           <h1 class="hero-header">Block Puzzle: Adventure Master</h1>
           <p class="hero-text">Solve, Explore, and Master the Puzzle Realms!</p>
-          <button class="hero-button">
-            <svg class="hero-button-bg" aria-hidden="true">
-              <use href="sprite.svg#icon-bg-button"></use>
-            </svg>
-            <span class="hero-button-text">Play Now</span> </button>
+          
+            <div class="button-wrapper">
+              <button class="hero-button">
+                Play Now
+              </button>
+                </div>
         </div>
       
         
@@ -105,10 +107,15 @@
         </div>
 
             <div class="image-wrapper">
+
+                <div class="angled-border"></div>
+                <img src="../img/about-img/img-about.png" alt="" width="508" height="438" class="base-image" />
+
                 <img src="/STP-9264/assets/img-about-C0vmle0i.png" alt="" width="508" height="438" class="base-image" />
                 <svg class="image-overlay" >
                     <use href="sprite.svg#icon-stroke-for-img"></use>
                 </svg>
+
             </div>
               
     </div>
@@ -147,7 +154,7 @@
             <p class="key-item-text">Play new levels each day to earn rewards, trophies, and new block skins.</p>
         </div>
         </li>
-        <li class="key-item" id=" strategic">
+        <li class="key-item" id="strategic">
           <svg class="key-icon" width="54" height="54" >
             <use href="../img/sprite.svg#icon-strategic"></use>
           </svg>

@@ -1,0 +1,179 @@
+/* Cookie Modal Styles (Full Width, Centered, with custom colors) */
+.cookie-modal {
+  display: none; /* Hidden by default, JS will set to 'flex' */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width of the viewport */
+  height: 100%; /* Full height of the viewport */
+  overflow: auto; /* Enable scroll if content is too large */
+  background-color: rgba(0, 0, 0, 0.7); /* Black overlay with opacity */
+
+  /* Flexbox для центрування вмісту */
+  display: flex; /* Activated by JS when modal should be shown */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+
+  animation: fadeIn 0.5s ease-out; /* Fade in animation for the overlay */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.cookie-modal-content {
+  background-color: var(--white); /* White background for the modal box */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center; /* Center text and block-level elements inside */
+  position: relative; /* For potential close button positioning */
+  animation: slideUp 0.6s ease-out; /* Slide up animation for the modal box */
+  box-sizing: border-box; /* Include padding in the width/height calculation */
+
+  /* Базові стилі для мобільних / маленьких екранів */
+  width: calc(
+    100% - 40px
+  ); /* 100% ширини з відступами по 20px з кожного боку */
+  max-width: 900px; /* Максимальна ширина для вмісту модального вікна (планшети) */
+  min-height: 180px; /* Мінімальна висота для модального вікна */
+  margin: 20px; /* Забезпечує відступ від країв екрана на дуже малих пристроях */
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.cookie-modal-content h2 {
+  font-size: 24px;
+  color: var(--purple-main); /* Використовуємо ваш колір purple-main */
+  margin-bottom: 15px;
+}
+
+.cookie-modal-content p {
+  font-size: 16px;
+  color: var(
+    --black
+  ); /* Використовуємо ваш колір black, або інший темний за бажанням */
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.cookie-modal-content a {
+  color: var(
+    --light-blue
+  ); /* Використовуємо ваш колір light-blue для посилання */
+  text-decoration: underline;
+}
+
+.cookie-modal-actions {
+  display: flex;
+  justify-content: center; /* Центрування кнопок всередині контейнера */
+  gap: 15px; /* Відстань між кнопками */
+  flex-wrap: wrap; /* Дозволяє кнопкам переноситись на новий рядок на малих екранах */
+}
+
+.cookie-btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cookie-btn.accept {
+  background-color: var(--light-blue); /* Використовуємо light-blue */
+  color: var(--white);
+}
+
+.cookie-btn.accept:hover {
+  background-color: var(--dark-blue); /* Темніший light-blue */
+  transform: translateY(-2px);
+}
+
+.cookie-btn.decline {
+  background-color: var(--light-red); /* Використовуємо light-red */
+  color: var(--white);
+}
+
+.cookie-btn.decline:hover {
+  background-color: var(--dark-red); /* Темніший light-red */
+  transform: translateY(-2px);
+}
+
+@media (min-width: 320px) and (max-width: 1199px) {
+  .cookie-modal-content {
+    width: calc(100% - 40px); /* 100% ширини з 20px відступами з кожного боку */
+    max-width: 500px; /* Обмеження, щоб не було занадто широко на планшетах */
+    padding: 20px; /* Зменшений padding для мобільних */
+    min-height: 160px;
+    margin: 20px;
+  }
+
+  .cookie-modal-content h2 {
+    font-size: 20px;
+  }
+
+  .cookie-modal-content p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .cookie-modal-actions {
+    flex-direction: column; /* Кнопки одна під одною на мобільних */
+    gap: 10px; /* Менший проміжок між кнопками */
+  }
+
+  .cookie-btn {
+    width: 100%; /* Кнопки на всю ширину модального вікна */
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+
+/* Веб версія (для екранів від 1200px і вище) */
+@media (min-width: 1200px) {
+  .cookie-modal-content {
+    width: calc(
+      100% - 200px
+    ); /* 100% ширини з 100px відступами з кожного боку */
+    max-width: 1200px; /* Максимальна ширина для вмісту модального вікна */
+    min-height: 200px; /* Мінімальна висота для десктопу (як ви просили) */
+    padding: 40px; /* Більший padding для десктопу */
+    margin: 100px; /* Відступ від країв екрана для десктопу */
+  }
+
+  .cookie-modal-content h2 {
+    font-size: 28px; /* Можна збільшити для десктопу */
+  }
+
+  .cookie-modal-content p {
+    font-size: 17px;
+  }
+
+  .cookie-modal-actions {
+    flex-direction: row; /* Кнопки в рядок */
+    gap: 20px; /* Більший проміжок між кнопками */
+  }
+
+  .cookie-btn {
+    width: auto; /* Авто ширина кнопок */
+    padding: 15px 30px;
+    font-size: 17px;
+  }
+}

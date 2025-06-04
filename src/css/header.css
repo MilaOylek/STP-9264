@@ -41,7 +41,15 @@
     text-decoration: none;
     font-size: 18px;
 }
-
+.burger {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    z-index: 1001;
+    cursor: pointer;
+}
 .nav-item-link:hover,
 .nav-item-link.active {
     color: #ffd039;
@@ -90,5 +98,8 @@
         line-height: 1.5;
         align-items: center;
         justify-content: space-between;
+    }
+    .close-btn{
+        visibility: hidden;
     }
 }

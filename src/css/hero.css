@@ -34,35 +34,45 @@
 .hero-button {
     position: relative;
     border: none;
+    outline: none;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     font-family: inherit;
     color: #262453;
+    background-color: #FFD039;
     width: 288px;
     height: 59px;
-}
-
-.hero-button-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1em;
-    height: 1em;
-    stroke: currentColor;
-    fill: currentColor;
-}
-
-.hero-button-text {
-    position: relative;
-    padding: 0.5em 1.5em;
     font-size: 16px;
-    font-weight: bold;
-    color: #000;
-    z-index: 1;
+        font-weight: bold;
+    clip-path: polygon(11px 0%, 100% 0%, 100% calc(100% - 11px), calc(100% - 11px) 100%,
+                0% 100%, 0% 11px);
 }
 
+.button-wrapper {
+    display: inline-block;
+    background-color: #262453;
+    padding: 2px;
+
+    clip-path: polygon(11px 0%, 100% 0%, 100% calc(100% - 11px), calc(100% - 11px) 100%,
+                0% 100%, 0% 11px);
+}
+.button-wrapper:hover, .button-wrapper:focus {
+    background-color: #262453;
+
+}
+
+.button-wrapper:hover .hero-button {
+    background-color: #262453;
+    color: white;
+}
+
+.button-wrapper:focus .hero-button {
+    background-color: white;
+    color: #FFD039;
+
+}
 /* Desktop view - min-width 1200px */
 @media screen and (min-width: 1200px) {
     .hero-img-bg {
@@ -83,4 +93,20 @@
     .hero-button {
         width: 148px;
         height: 59px;
-    } }
+    }
+        .button-wrapper:hover,
+        .button-wrapper:focus {
+            background-color: #FFD039;
+    
+        }
+    
+        .button-wrapper:hover .hero-button {
+            background-color: #262453;
+            color: white;
+        }
+    
+        .button-wrapper:focus .hero-button {
+            background-color: #262453;
+            color: #FFD039;}
+            
+ }

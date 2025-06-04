@@ -32,12 +32,12 @@ const ACCORDION_CONFIG = {
 
 const createFaqItemHTML = item => `
   <li class="ac">
-    <h2 class="ac-header">
+    <h3 class="ac-header">
       <button class="ac-trigger" type="button">
         ${item.info}
         <span class="arrow" aria-hidden="true"></span>
       </button>
-    </h2>
+    </h3>
     <div class="ac-panel">
       <p class="ac-text">${item.more}</p>
     </div>
@@ -83,7 +83,7 @@ const initFAQ = () => {
       panel.setAttribute('aria-expanded', index === 0 ? 'true' : 'false');
     });
   } catch (error) {
-    console.error('Error initializing FAQ:', error); 
+    console.error('Error initializing FAQ:', error);
   }
 };
 

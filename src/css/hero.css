@@ -1,112 +1,124 @@
 .hero-img-bg {
-    background-image: image-set(url('../img/hero-img/hero-section.png') 1x,
-            url('../img/hero-img/hero-section2x.png') 2x);
-   
-    background-repeat: no-repeat;
+  background-image: image-set(
+    url('../img/hero-img/hero-section.png') 1x,
+    url('../img/hero-img/hero-section2x.png') 2x
+  );
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 620px;
-    width: 100%;
-    margin-bottom: 48px;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 620px;
+  width: 100%;
+  margin-bottom: 48px;
 }
 
 .hero-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-.hero-header{
-    font-size: 28px;
+.hero-header {
+  font-size: 28px;
 }
 .hero-text {
-    margin-top: 12px;
-    margin-bottom: 24px;
-    font-size: 16px;
-    color: #fff;
-    width: 256px;
+  margin-top: 12px;
+  margin-bottom: 24px;
+  font-size: 16px;
+  color: #fff;
+  width: 256px;
 }
 
 /* Hero button */
 .hero-button {
-    position: relative;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-family: inherit;
-    color: #262453;
-    background-color: #FFD039;
-    width: 288px;
-    height: 59px;
-    font-size: 16px;
-        font-weight: bold;
-    clip-path: polygon(11px 0%, 100% 0%, 100% calc(100% - 11px), calc(100% - 11px) 100%,
-                0% 100%, 0% 11px);
+  position: relative;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  color: #262453;
+  background-color: #ffd039;
+  width: 288px;
+  height: 59px;
+  font-size: 16px;
+  font-weight: bold;
+  clip-path: polygon(
+    11px 0%,
+    100% 0%,
+    100% calc(100% - 11px),
+    calc(100% - 11px) 100%,
+    0% 100%,
+    0% 11px
+  );
 }
 
 .button-wrapper {
-    display: inline-block;
-    background-color: #262453;
-    padding: 2px;
+  display: inline-block;
+  background-color: #262453;
+  padding: 2px;
 
-    clip-path: polygon(11px 0%, 100% 0%, 100% calc(100% - 11px), calc(100% - 11px) 100%,
-                0% 100%, 0% 11px);
+  clip-path: polygon(
+    11px 0%,
+    100% 0%,
+    100% calc(100% - 11px),
+    calc(100% - 11px) 100%,
+    0% 100%,
+    0% 11px
+  );
 }
-.button-wrapper:hover, .button-wrapper:focus {
-    background-color: #262453;
-
+.button-wrapper:hover,
+.button-wrapper:focus {
+  background-color: #262453;
 }
 
 .button-wrapper:hover .hero-button {
-    background-color: #262453;
-    color: white;
+  background-color: #262453;
+  color: white;
 }
 
 .button-wrapper:focus .hero-button {
-    background-color: white;
-    color: #FFD039;
-
+  background-color: white;
+  color: #ffd039;
 }
 /* Desktop view - min-width 1200px */
 @media screen and (min-width: 1200px) {
-    .hero-img-bg {
-        height: 631px;
-        width: 1200px;
-        margin: 0 auto 100px;
-    }
-    .hero-header {
-            font-size: 48px;   
-    }
-    .hero-text {
-        font-size: 18px;
-        margin-top: 24px;
-        margin-bottom: 32px;
-        width: 963px;
-    }
+  .hero-img-bg {
+    height: 631px;
+    width: 1200px;
+    margin: 0 auto 100px;
+  }
+  .hero-header {
+    font-size: 48px;
+  }
+  .hero-text {
+    font-size: 18px;
+    margin-top: 24px;
+    margin-bottom: 32px;
+    width: 963px;
+  }
 
-    .hero-button {
-        width: 148px;
-        height: 59px;
-    }
-        .button-wrapper:hover,
-        .button-wrapper:focus {
-            background-color: #FFD039;
-    
-        }
-    
-        .button-wrapper:hover .hero-button {
-            background-color: #262453;
-            color: white;
-        }
-    
-        .button-wrapper:focus .hero-button {
-            background-color: #262453;
-            color: #FFD039;}
-            
- }
+  .hero-button {
+    width: 148px;
+    height: 59px;
+  }
+  .button-wrapper:hover,
+  .button-wrapper:focus {
+    background-color: #ffd039;
+  }
+
+  .button-wrapper:hover .hero-button {
+    background-color: #262453;
+    color: white;
+  }
+
+  .button-wrapper:focus .hero-button {
+    background-color: #262453;
+    color: #ffd039;
+  }
+}

@@ -1,10 +1,6 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
+
 /* Common styles */
+@import url('node_modules/modern-normalize/modern-normalize.css');
 @import url('./reset.css');
 @import url('./base.css');
 @import url('./container.css');
@@ -21,4 +17,4 @@
 @import url('./modal-cookies.css');
 @import url('./back-link.css');
 @import url('./footer.css');
-@import url('./privasy.css');
+/* @import url('./privaсy.css'); */

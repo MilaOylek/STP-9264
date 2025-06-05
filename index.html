@@ -27,46 +27,47 @@
     <script type="module" crossorigin src="/STP-9264/index.js"></script>
     <link rel="modulepreload" crossorigin href="/STP-9264/assets/vendor-Cb7VvBBu.js">
     <link rel="stylesheet" crossorigin href="/STP-9264/assets/vendor-BfPs2Zf6.css">
-    <link rel="stylesheet" crossorigin href="/STP-9264/assets/styles-BJfrZxtr.css">
+    <link rel="stylesheet" crossorigin href="/STP-9264/assets/styles-B2h-kpFw.css">
   </head>
   <body>
     <header class="header">
-  <div class="container">
-    <a href="#" class="logo-header">
-      <img src="/STP-9264/assets/img-header-B95Q_Tc1.png" alt="logo img">
-    </a>
-    
-    <nav class="nav-title" id="navMenu">
-      <button class="close-btn" id="closeBtn">✕</button>
+  <div class="container header-container">
+    <a href="./index.html" class="logo">
+        <img src="/STP-9264/assets/img-header-B95Q_Tc1.png" alt="logo img">
+      </a>
+
+      <nav class="nav">
       <ul class="nav-list">
-       
-        <li class="nav-item">
-          <a class="nav-item-link" href="#About-game">About Game</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-item-link" href="#Key Features" >Key Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-item-link" href="#FAQ" >FAQ</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-item-link" href="#Player Reviews">Player Reviews</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-item-link" href="#Gallery" >Gallery</a>
-        </li>
+        <li><a href="#About-game">About Game</a></li>
+        <li><a href="#Key Features">Key Features</a></li>
+        <li><a href="#FAQ">FAQ</a></li>
+        <li><a href="#Player Reviews">Player Reviews</a></li>
+        <li><a href="#Gallery">Gallery</a></li>
+      </ul>
+    </nav>
+
+    <button class="burger" type="button" aria-label="Open menu">
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu visually-hidden">
+    <button class="close-menu" type="button" aria-label="Close menu">
+      &times;
+    </button>
+    <nav class="mobile-nav">
+      <ul class="mobile-nav-list">
+        <li><a href="#About-game">About Game</a></li>
+        <li><a href="#Key Features">Key Features</a></li>
+        <li><a href="#FAQ">FAQ</a></li>
+        <li><a href="#Player Reviews">Player Reviews </a></li>
+        <li><a href="#Gallery">Gallery</a></li>
       </ul>
     </nav>
   </div>
-  <button class="burger" id="burgerBtn">
-    <svg>
-      <use href="/STP-9264/assets/sprite-BAV0hUyi.svg#icon-burger"></use>
-    </svg>
-  </button>
- 
-  <script src="/js/header.js"></script>
 </header>
-
 
     <main>
       <!-- Loads the specified .html file -->
@@ -110,7 +111,12 @@
             <div class="image-wrapper">
 
                 <div class="angled-border"></div>
-                   <img src="/STP-9264/assets/img-about-C0vmle0i.png" alt="" width="508" height="438" class="base-image" />
+
+               
+                <img src="/STP-9264/assets/img-about-C0vmle0i.png" alt="" width="508" height="438" class="base-image" />
+
+<!--                    <img src="/img/about-img/img-about.png" alt="" width="508" height="438" class="base-image" /> -->
+
                 <svg class="image-overlay" >
                     <use href="sprite.svg#icon-stroke-for-img"></use>
                 </svg>

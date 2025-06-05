@@ -4,7 +4,9 @@
   align-items: center;
   justify-content: flex-start;
   min-height: 100vh;
-  padding: 40px 0;
+  /* padding: 40px 0; */
+  padding-top: 40px;
+  padding-bottom: 100px;
 }
 
 .gallery-container {
@@ -127,7 +129,9 @@
 
 @media (max-width: 768px) {
   .gallery {
-    padding: 20px 0;
+    /* padding: 20px 0; */
+    padding-top: 20px;
+    padding-bottom: 100px;
   }
   .gallery-container {
     width: 100%;
@@ -137,10 +141,12 @@
     overflow: hidden;
     position: relative;
   }
-
+ .title-gallery-box {
+    margin-bottom: 60px;
+ }
   .title-gallery {
     font-size: 22px;
-    margin-bottom: 12px;
+    /* margin-bottom: 12px; */
   }
 
   .gallery-wrapper,
@@ -158,9 +164,9 @@
     margin-bottom: 24px;
   }
 
-  .gallery-truck {
+  /* .gallery-truck {
     margin-bottom: 16px;
-  }
+  } */
   .gallery-card {
     width: 256px;
     height: 455px;

@@ -1,181 +1,200 @@
-
 .key-header {
-    font-family: "Zen Dots", sans-serif;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 1.5;
-    text-align: center;
-    color: #fff;
-    padding-bottom: 32px;
+  font-family: 'Zen Dots', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.5;
+  text-align: center;
+  color: #fff;
+  padding-bottom: 32px;
 }
 
 .key-list {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
 }
 
-/* Card */
+
 .key-item {
-    border-radius: 8px;
-    width: 249px;
-    height: 234px;
-    background-color: #051603;
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
+  border-radius: 8px;
+  width: 249px;
+  min-height: 234px;
+  height: 234px;
+  background-color: #051603;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+   box-sizing: border-box;
 }
 
 .key-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 
-/* Text styles */
+
 .key-item-header {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.5;
-    text-align: center;
-    color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.5;
+  text-align: center;
+  color: #fff;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .key-item-text {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    text-align: center;
-    color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: #fff;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
-/* Desktop layout (≥1200px) */
 @media screen and (min-width: 1200px) {
-    .section-key .container {   
-        width: 1040px;
-    }
-    .key-header {
-        font-size: 36px;
-        padding-bottom: 60px;
-    }
+  .section-key .container {
+    width: 1040px;
+  }
+  .key-header {
+    font-size: 36px;
+    padding-bottom: 60px;
+  }
 
-    .key-list {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: auto auto;
-        gap: 24px;
-        justify-content: center;
-    }
+  .key-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 24px;
+    justify-content: center;
+  }
 
-    .key-item {
-        width: 283px;
-        height: 277px;
-        padding: 27px 24px;
-        gap: 42px;
-    }
+  .key-item {
+    width: 330px;
+    height: 331px;
+    padding: 27px 23px;
+    gap: 42px;
+  }
 
-    .key-item-header {
-        font-size: 22px;
-    }
+  .key-item-header {
+    font-size: 22px;
+  }
 
-    .key-item-text {
-        font-size: 18px;
-    }
+  .key-item-text {
+    font-size: 18px;
+  }
 }
 .key-icon {
-    fill: transparent;
-    transition: stroke 0.3s ease;
+  fill: transparent;
+  transition: stroke 0.3s ease;
+  stroke-width: 2px;
+  width: 54px;
+  height: 54px;
 }
-/* Default background colors */
+
 #puzzle {
-    background-color: #051b2b;
+  background-color: #051b2b;
+}
+  #puzzle .key-icon {  
+  stroke: #196fad;
 }
 
 #adventure {
-    background-color: #19052b;
+  background-color: #19052b;
+}
+#adventure .key-icon {
+  stroke: #8119ad;
 }
 
 #challenge {
-    background-color: #05252b;
+  background-color: #05252b;
+}
+#challenge .key-icon {
+  stroke: #19a8ad;
 }
 
 #strategic {
-    background-color: #151512;
+  background-color: #151512;
 }
-
+#strategic .key-icon {
+  stroke: #ad8f19;
+}
 #powerup {
-    background-color: #051603;
+  background-color: #051603;
 }
-
+#powerup .key-icon {
+  stroke: #0a8b2b;
+}
 #visual {
-    background-color: #2b0506;
+  background-color: #2b0506;
+}
+#visual .key-icon {
+  stroke: #8b0a0c;
 }
 
-/* Hover & focus effects */
 #puzzle:hover,
 #puzzle:focus {
-    background-color: #196fad;
+  background-color: #196fad;
+}
+  #puzzle:hover .key-icon,
+#puzzle:focus .key-icon {
+  stroke: #051b2b;
 }
 
 #adventure:hover,
 #adventure:focus {
-    background-color: #8119ad;
+  background-color: #8119ad;
+}
+#adventure:hover .key-icon,
+#adventure:focus .key-icon {
+  stroke: #19052b;
 }
 
 #challenge:hover,
 #challenge:focus {
-    background-color: #19a8ad;
+  background-color: #19a8ad;
+}
+#challenge:hover .key-icon,
+#challenge:focus .key-icon {
+  stroke: #05252b;
 }
 
 #strategic:hover,
 #strategic:focus {
-    background-color: #ad8f19;
+  background-color: #ad8f19;
 }
-
+#strategic:hover .key-icon,
+#strategic:focus .key-icon {
+  stroke: #151512;
+}
 #powerup:hover,
 #powerup:focus {
-    background-color: #0a8b2b;
+  background-color: #0a8b2b;
 }
-
+#powerup:hover .key-icon,
+#powerup:focus .key-icon {
+  stroke: #051603;
+}
 #visual:hover,
 #visual:focus {
-    background-color: #8b0a0c;
+  background-color: #8b0a0c;
 }
-
-#icon-puzzle {
-    stroke: #196fad;
+#visual:hover .key-icon,
+#visual:focus .key-icon {
+  stroke: #2b0506;
 }
-
-#icon-adventure {
-    stroke: #8119ad;
-}
-
-#icon-challenge {
-    stroke: #19a8ad;
-}
-
-#icon-strategic {
-    stroke: #ad8f19;
-}
-
-#icon-powerup {
-    stroke: #0a8b2b;
-}
-
-#icon-visual {
-    stroke: #8b0a0c;
-}
-
 
 .key-item:hover .key-icon,
 .key-item:focus .key-icon {
-    stroke: #19052b;
+  stroke: #19052b;
 }

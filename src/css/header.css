@@ -5,6 +5,17 @@
   left: 0;
   width: 100%;
   z-index: 100;
+
+  background-color: #262453;
+  border: 1px solid rgba(202, 124, 200, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(
+    to right,
+    rgba(202, 124, 200, 0.5),
+    rgba(202, 124, 200, 0) 30%,
+    rgba(202, 124, 200, 0) 70%,
+    rgba(202, 124, 200, 0.3)
+  );
 }
 
 .header-container {
@@ -191,8 +202,19 @@ html {
   .logo {
     display: block;
   }
+  .header {
+    background-color: #262453;
+    border: 1px solid rgba(202, 124, 200, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(
+      to right,
+      rgba(202, 124, 200, 0.5),
+      rgba(202, 124, 200, 0) 30%,
+      rgba(202, 124, 200, 0) 70%,
+      rgba(202, 124, 200, 0.3)
+    );
+  }
 }
-
 @media (min-width: 1200px) {
   .header {
     background-color: #262453;

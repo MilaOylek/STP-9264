@@ -35,7 +35,7 @@ const createFaqItemHTML = item => `
     <h3 class="ac-header">
       <button class="ac-trigger" type="button">
         ${item.info}
-        <span class="arrow" aria-hidden="true"></span>
+        <span class="arrow arrow-button" aria-hidden="true"></span>
       </button>
     </h3>
     <div class="ac-panel">

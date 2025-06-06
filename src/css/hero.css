@@ -1,13 +1,23 @@
+.section-hero {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .hero-img-bg {
+  background-image: url('/img/hero-img/hero-section.png');
   background-image: image-set(
     url('/img/hero-img/hero-section.png') 1x,
     url('/img/hero-img/hero-section2x.png') 2x
   );
   background-repeat: no-repeat;
-
   background-size: cover;
   background-position: center;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,9 +34,12 @@
   text-align: center;
   padding: 0 20px;
 }
+
 .hero-header {
   font-size: 28px;
+  color: #fff;
 }
+
 .hero-text {
   margin-top: 12px;
   margin-bottom: 24px;
@@ -34,12 +47,10 @@
   color: #fff;
   width: 256px;
   max-width: 100%;
-   margin-left: auto;
-   margin-right: auto;
-  
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Hero button */
 .hero-button {
   position: relative;
   border: none;
@@ -63,13 +74,13 @@
     0% 100%,
     0% 11px
   );
+  text-decoration: none;
 }
 
 .button-wrapper {
   display: inline-block;
   background-color: #262453;
   padding: 2px;
-
   clip-path: polygon(
     11px 0%,
     100% 0%,
@@ -80,6 +91,7 @@
   );
   transition: background-color 0.3s ease;
 }
+
 .button-wrapper:hover,
 .button-wrapper:focus {
   background-color: #262453;
@@ -94,20 +106,24 @@
   background-color: white;
   color: #ffd039;
 }
+
 @media screen and (max-width: 767px) {
   .container {
     padding: 0;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .hero-img-bg {
     height: 631px;
     max-width: 1200px;
     margin: 0 auto 100px;
   }
+
   .hero-header {
     font-size: 48px;
   }
+
   .hero-text {
     font-size: 18px;
     margin-top: 24px;
@@ -119,6 +135,7 @@
     width: 148px;
     height: 59px;
   }
+
   .button-wrapper:hover,
   .button-wrapper:focus {
     background-color: #ffd039;

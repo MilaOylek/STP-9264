@@ -1,15 +1,25 @@
- .faq-section {
-  /* padding-bottom: 80px; */
+.faq-section {
+  padding-bottom: 100px;
+  min-height: 866px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 .accordion-container {
   display: flex;
   flex-direction: column;
-  max-width: 100%;
+  max-width: 774px;
   margin: 40px auto 0 auto;
   font-family: var(--font-family);
-  gap: 0;
+  gap: 36px;
 }
-
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
 .faq-section .headline {
   font-family: var(--second-family);
   font-weight: 400;
@@ -19,19 +29,16 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--white);
-  margin-top: 30px;
   margin-bottom: 60px;
 }
 
-.accordion-container li{
-    margin-bottom:36px;
+.accordion-container li {
+  padding: 24px 20px;
+  background-color: transparent;
+  border-radius: 8px;
+  color: #fff !important;
 }
 
-.ac.is-active .ac-header {
-    border-bottom: 2px solid var(--yellow-main);
-}
-
-.ac,
 .ac-panel,
 .ac-text {
   font-family: var(--font-family);
@@ -42,10 +49,8 @@
   display: flex;
   flex-direction: column;
   background: none;
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-
-
 .ac .ac-trigger {
   font-weight: 400;
   font-size: 18px;
@@ -56,7 +61,7 @@
   font-family: var(--font-family);
   padding-right: 24px;
   transition: background-color 0.3s ease;
-      padding: 8px 32px 28px 28px;
+  padding: 8px 32px 28px 28px;
 }
 
 .ac-trigger::after {
@@ -88,22 +93,17 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  /* gap: 16px; */
   text-transform: uppercase;
   position: relative;
-   transition: border-bottom 0.3s ease, padding-bottom 0.3s ease, margin-bottom 0.3s ease;
-}
-
-.accordion-container .ac + .ac {
-    border-top: 1px solid var(--yellow-main); 
+  transition: border-bottom 0.3s ease, padding-bottom 0.3s ease,
+    margin-bottom 0.3s ease;
 }
 
 .ac.is-active .ac-header {
-    border-bottom: 2px solid var(--yellow-main);
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+  border-bottom: 2px solid var(--yellow-main);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
-
 
 .arrow {
   display: block;
@@ -114,20 +114,50 @@
   position: absolute;
   top: 50%;
   right: 0;
-  transform: translateY(-50%) rotate(45deg);
+  transform: translateY(-50%) rotate(35deg);
+  transition: transform 0.3s ease;
+  background-color: var(--yellow-main);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 8px rgba(96, 39, 60, 0.5);
+}
+
+.arrow::before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  transform: rotate(1deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(5deg);
   transition: transform 0.3s ease;
 }
 
-.ac.is-active .arrow {
-  transform: translateY(-50%) rotate(-135deg);
+.ac.is-active .arrow::before {
+  transform: translate(-50%, -50%) rotate(-135deg);
 }
 
-.ac {
-    background-color: transparent; 
-    padding-left: 20px; 
-    padding-right: 20px;
-    padding-top: 18px;
-    padding-bottom: 18px;
+.arrow {
+  border: none;
+}
+
+.ac.is-active .arrow {
+  transform: translateY(-50%) rotate(-180deg);
+}
+
+.ac + .ac {
+  border-bottom: 1px solid #e0e0e0;
+  gap: 15px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -135,10 +165,6 @@
     font-size: 30px;
     margin-top: 20px;
     margin-bottom: 40px;
-  }
-
-  .ac {
-    /* padding: 16px; */
   }
 
   .ac .ac-trigger {
@@ -152,7 +178,7 @@
   }
 
   .faq-section {
-    /* padding-bottom: 40px; */
+    padding-bottom: 80px;
   }
 }
 
@@ -161,27 +187,20 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    /* gap: 60px; */
     position: relative;
-    color:#fff;
+    color: #fff;
   }
 
-  .accordion-container {
-    /* margin: 0; */
-  }
   .ac-text {
-    color:#fff;
+    color: #fff;
   }
 
   .ac {
-    /* padding: 10px 10px; */
     width: 774px;
     color: #fff;
   }
 
   .ac .ac-header {
     min-width: 592px;
-    /* gap: 24px; */
   }
-  
-} 
+}

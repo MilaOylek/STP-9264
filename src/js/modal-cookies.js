@@ -20,13 +20,6 @@ export function initializeCookieModal() {
   }
   cookieModal.dataset.initialized = 'true';
 
-  console.log(
-    'Cookie Modal Elements Found and Initializing (from modal-cookies.js):'
-  );
-  console.log('  cookieModal:', cookieModal);
-  console.log('  acceptBtn:', acceptBtn);
-  console.log('  declineBtn:', declineBtn);
-
   function setCookie(name, value, days) {
     let expires = '';
     if (days) {

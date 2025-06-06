@@ -37,9 +37,21 @@ body {
   font-size: 18px;
   line-height: 150%;
   color: var(--white);
-  background-color: var(--purple-main);;
+  background-color: var(--purple-main);
+  overflow-x: hidden;
+}
+  
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
+@media (min-width: 1200px) {
+  html {
+    scroll-padding-top: 100px;
+  }
+}
 h1,
 h2,
 h3,
@@ -99,4 +111,10 @@ p{
     line-height: 1.5;
     color: #fff;
 }
+
+/* img {
+  max-width: 100%;
+  height: auto; 
+  display: block;
+} */
 

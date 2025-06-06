@@ -10,10 +10,10 @@
 }
 
 .hero-img-bg {
-  background-image: url('/img/hero-img/hero-section.png');
+  background-image: url('/img/hero-img/hero-mobile.png');
   background-image: image-set(
-    url('/img/hero-img/hero-section.png') 1x,
-    url('/img/hero-img/hero-section2x.png') 2x
+    url('/img/hero-img/hero-mobile.png') 1x,
+    url('/img/hero-img/hero-mobile2x.png') 2x
   );
   background-repeat: no-repeat;
   background-size: cover;
@@ -118,8 +118,21 @@
     height: 631px;
     max-width: 1200px;
     margin: 0 auto 100px;
+    background-image: url('/img/hero-img/hero-section.png');
+    background-image: image-set(
+      url('/img/hero-img/hero-section.png') 1x,
+      url('/img/hero-img/hero-section2x.png') 2x
+    );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 620px;
+    width: 100%;
+    margin-bottom: 48px;
   }
-
   .hero-header {
     font-size: 48px;
   }

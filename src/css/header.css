@@ -1,11 +1,11 @@
 .header {
-  padding: 20px 0;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
-  background-color: #262453;
+  background-color: transparent;
+  box-sizing: border-box;
 }
 
 .header-container {
@@ -15,6 +15,7 @@
   align-items: center;
   max-width: 1200px;
   box-sizing: border-box;
+  padding: 0 20px;
 }
 
 html {
@@ -71,9 +72,17 @@ html {
   transition: all 0.3s ease;
 }
 @media screen and (max-width: 768px) {
-
   .header-container {
     padding: 0 30px;
+  }
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: none;
+    top: 30px;
   }
 }
 /* Hover */
@@ -100,7 +109,6 @@ html {
 }
 
 /* Mobile menu */
-
 
 .mobile-menu {
   position: fixed;
@@ -164,17 +172,29 @@ html {
 }
 
 /* Button close */
-.close-menu {
-  position: absolute;
+.mobile-menu {
+  position: fixed;
   top: 12px;
-  right: 20px;
-  background: none;
+  right: 5px;
+  width: 100%;
+  height: 100%;
+  background-color: #262453;
   color: #fff;
-  border: none;
-  font-size: 32px;
-  cursor: pointer;
-  transition: color 0.3s ease;
-  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: start;
+  z-index: 999;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.mobile-menu.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .close-menu:hover {
@@ -194,31 +214,28 @@ html {
 
 @media (max-width: 768px) {
   .header {
-   position: relative;
-   top: 80px;
-    
+    position: relative;
   }
 }
 @media (min-width: 769px) {
   .logo {
     display: block;
   }
-  /* .header {
+  .header {
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
     background-color: #262453;
-    border: 1px solid rgba(202, 124, 200, 0.1);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(
-      to right,
-      rgba(202, 124, 200, 0.5),
-      rgba(202, 124, 200, 0) 30%,
-      rgba(202, 124, 200, 0) 70%,
-      rgba(202, 124, 200, 0.3)
-    );
-  } */
+  }
 }
+
 @media (min-width: 1200px) {
   .header {
     background-color: #262453;
+    padding: 20px 0;
   }
   .header-container {
     max-width: 1040px;

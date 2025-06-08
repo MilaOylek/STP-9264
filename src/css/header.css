@@ -13,7 +13,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
   box-sizing: border-box;
   padding: 0 20px;
 }
@@ -250,29 +249,15 @@ html {
     position: relative;
   }
 }
-/* @media (min-width: 769px) {
-  .logo {
-    display: block;
-  }
-  .header {
-    padding: 20px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    background-color: #262453;
-  }
-} */
 
 @media (min-width: 1200px) {
   .header {
     background-color: #262453;
-    padding: 20px 80px;
+    padding: 24px 80px;
+    
   }
   .header-container {
-    max-width: 1040px;
-    padding: 0 20px;
+    margin: 0 auto;
   }
 
   .logo {

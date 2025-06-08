@@ -3,61 +3,35 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeBtn = document.querySelector('.close-menu');
   const mobileMenu = document.querySelector('.mobile-menu');
   const body = document.body;
-
-  const navList = mobileMenu;
+  const navLinks = document.querySelectorAll('.nav-list a, .mobile-nav-list a');
 
   const toggleMobileMenu = () => {
     mobileMenu.classList.toggle('active');
+    burgerBtn.classList.toggle('open');
     body.classList.toggle('no-scroll');
 
-    if (mobileMenu.classList.contains('active')) {
-      burgerBtn.style.display = 'none';
-      closeBtn.style.display = 'block';
-    } else {
-      burgerBtn.style.display = 'block';
-      closeBtn.style.display = 'none';
-    }
+    const isMenuOpen = mobileMenu.classList.contains('active');
+    burgerBtn.setAttribute('aria-expanded', isMenuOpen);
   };
 
-  if (burgerBtn && mobileMenu && closeBtn) {
+  if (burgerBtn && closeBtn && mobileMenu) {
     burgerBtn.addEventListener('click', toggleMobileMenu);
     closeBtn.addEventListener('click', toggleMobileMenu);
   }
 
-  const sections = document.querySelectorAll('section');
-  const navLinks = document.querySelectorAll('.nav-list a, .mobile-nav-list a');
-
-  window.addEventListener('scroll', () => {
-    let currentSectionId = '';
-    const headerOffset = 80;
-
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.offsetHeight;
-
+  navLinks.forEach(link => {
+    link.addEventListener('click', event => {
       if (
-        window.pageYOffset >= sectionTop - headerOffset &&
-        window.pageYOffset < sectionTop + sectionHeight - headerOffset
+        mobileMenu.classList.contains('active') &&
+        link.closest('.mobile-nav-list')
       ) {
-        currentSectionId = section.getAttribute('id');
+        toggleMobileMenu();
       }
     });
-
-    navLinks.forEach(link => {
-      link.classList.remove('active-link');
-      if (link.getAttribute('href') === `#${currentSectionId}`) {
-        link.classList.add('active-link');
-      }
-    });
-  });
-
-  const mobileNavLinks = document.querySelectorAll('.mobile-nav-list a');
-  mobileNavLinks.forEach(link => {
-    link.addEventListener('click', toggleMobileMenu);
   });
 
   window.addEventListener('resize', () => {
-    if (window.innerWidth > 768 && mobileMenu.classList.contains('active')) {
+    if (window.innerWidth > 1199 && mobileMenu.classList.contains('active')) {
       toggleMobileMenu();
     }
   });

@@ -9,7 +9,6 @@
 }
 
 .footer-container {
-  max-width: 1200px;
   margin: 0 auto;
   padding: 0 16px;
 
@@ -90,6 +89,19 @@
   }
 }
 @media (max-width: 767px) {
+  .mobile-break {
+    display: inline;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    height: 69px;
+  }
   .mobile-break {
     display: inline;
   }

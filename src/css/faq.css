@@ -15,7 +15,6 @@
   gap: 36px;
 }
 .container {
-  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
@@ -179,6 +178,41 @@
 
   .faq-section {
     padding-bottom: 80px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    max-width: 768px;
+    padding: 0 30px;
+  }
+  .faq-section {
+    padding-bottom: 90px;
+    min-height: auto;
+  }
+  .faq-section .headline {
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+  .accordion-container {
+    max-width: 100%;
+    padding: 0 15px;
+    gap: 30px;
+  }
+  .ac .ac-trigger {
+    font-size: 17px;
+    padding: 15px 50px 15px 25px;
+  }
+  .ac-panel {
+    font-size: 16px;
+    padding: 0 25px 15px;
+  }
+  .arrow {
+    right: 20px;
+  }
+  .ac.is-active .ac-header {
+    padding-bottom: 8px;
+    margin-bottom: 8px;
   }
 }
 

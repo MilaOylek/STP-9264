@@ -164,13 +164,13 @@
   color: #262453;
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
   .cookie-container {
     flex-direction: column;
     align-items: flex-start;
     padding: 15px;
-    /* width: 90%;
-    max-width: 100%; */
+    width: 90%;
+    max-width: 100%;
     height: auto;
     max-width: 1040px;
   }

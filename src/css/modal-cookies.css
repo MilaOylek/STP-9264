@@ -166,7 +166,7 @@
 
 @media (max-width: 1200px) {
   .cookie-container {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     padding: 15px;
     width: 90%;
